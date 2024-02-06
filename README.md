@@ -17,10 +17,8 @@ cdk bootstrap --profile james-user
 
 If using other command, cdk boostrap --context account=... right now it won't work.
 
-
-
 1. Build bootstrap
-   GOOS=linux GOARCH=amd64 go build -tags lambda.norpc -o bootstrap
+   GOOS=linux GOARCH=amd64 go build -tags lambda.norpc -o bootstrap .
 
 2. Build zip
    zip service.zip bootstrap
